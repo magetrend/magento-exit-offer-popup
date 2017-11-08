@@ -8,7 +8,7 @@ Turn abandoning visitors into customers - all you need to do is offer them a vou
  Your customers will be happy to receive the discount, and you’ll be happy with your increased sales. 
  Plus, you’ll get the customer’s email address.
 
-<a href="http://www.magetrend.com/newsletter-popup">Magento Exit Intent Popup Landing Page</a><br/>
+<a href="http://www.magetrend.com/exit-intent-popup-free">Magento Exit Intent Popup Landing Page</a><br/>
 <a href="http://epf.magetrend.com/">Demo Page</a><br/> 
 <a href="http://www.magetrend.com/exit-intent-popup-free/user-guide">User Guide</a><br/>
 
