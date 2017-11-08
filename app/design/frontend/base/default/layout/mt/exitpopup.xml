@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+	<reference name="head">		
+		<action method="addItem"><type>skin_css</type><name>css/mt/exitpopup.css</name><params/></action>
+        <action method="addJs" ifconfig="exitpopup/general/jquery"><script>mt/exitpopup/jquery-2.1.1.min.js</script></action>
+        <action method="addJs" ifconfig="exitpopup/general/jquery"><script>mt/exitpopup/jquery_no_conflict.js</script></action>
+        <action method="addItem"><type>skin_js</type><name>js/mt/exitpopup/exitpopup.js</name><params/></action>
+
+    </reference>
+    <reference name="before_body_end">
+        <block type="exitpopup/popup" name="popup" template="mt/exitpopup/popup.phtml">
+            <block type="exitpopup/popup_theme_default" name="popup_theme_default">
+                <block type="exitpopup/popup_theme_default_subscription" name="popup_theme_default_subscription"/>
+            </block>
+        </block>
+    </reference>
+  </default>
+</layout> 

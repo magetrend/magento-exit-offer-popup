@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MT_Exitpopup>
+            <version>1.0.0</version>
+        </MT_Exitpopup>
+    </modules>
+
+    <frontend>
+        <routers>
+            <exitpopup>
+                <use>standard</use>
+                <args>
+                    <module>MT_Exitpopup</module>
+                    <frontName>exitpopup</frontName>
+                </args>
+            </exitpopup>
+        </routers>
+
+        <layout>
+            <updates>
+                <exitpopup>
+                    <file>mt/exitpopup.xml</file>
+                </exitpopup>
+            </updates>
+        </layout>
+
+    </frontend>
+
+    <global>
+        <blocks>
+            <exitpopup>
+                <class>MT_Exitpopup_Block</class>
+            </exitpopup>
+            <adminhtml>
+                <rewrite>
+                    <newsletter_subscriber_grid>MT_Exitpopup_Block_Adminhtml_Newsletter_Subscriber_Grid</newsletter_subscriber_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+
+        <helpers>
+            <exitpopup>
+                <class>MT_Exitpopup_Helper</class>
+            </exitpopup>
+        </helpers>
+
+        <models>
+            <exitpopup>
+                <class>MT_Exitpopup_Model</class>
+            </exitpopup>
+        </models>
+
+        <resources>
+            <exitpopup_setup>
+                <setup>
+                    <module>MT_Exitpopup</module>
+                    <class>MT_Exitpopup_Model_Resource_Setup</class>
+                </setup>
+            </exitpopup_setup>
+        </resources>
+
+        <events>
+            <newsletter_subscriber_save_before>
+                <observers>
+                    <exitpopup_newsletter_subscriber_save_before>
+                        <class>MT_Exitpopup_Model_Observer</class>
+                        <method>beforeSaveSubscriber</method>
+                    </exitpopup_newsletter_subscriber_save_before>
+                </observers>
+            </newsletter_subscriber_save_before>
+
+        </events>
+
+    </global>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <exitpopup>
+                    <file>mt/exitpopup.xml</file>
+                </exitpopup>
+            </updates>
+        </layout>
+    </adminhtml>
+
+    <default>
+        <exitpopup>
+            <general>
+                <jquery>0</jquery>
+                <dev>0</dev>
+            </general>
+
+            <popup>
+                <isactive>0</isactive>
+                <showonlast>1</showonlast>
+                <content>newsletter_subscription_form</content>
+                <theme>default</theme>
+                <layer_close>0</layer_close>
+                <cookielifetime>365</cookielifetime>
+                <cookiename>mt_exitpopup</cookiename>
+            </popup>
+
+            <newsletter_subscription_form>
+                <show_coupon_code>0</show_coupon_code>
+                <text_1>DO YOU WANT 20% OFF FROM ORDER?</text_1>
+                <text_2>Subscribe our newsletter and get free voucher.</text_2>
+
+            </newsletter_subscription_form>
+
+            <static_cms_block>
+                <id></id>
+            </static_cms_block>
+
+            <theme_default>
+                <color_1>ffffff</color_1>
+                <color_2>000000</color_2>
+                <color_3>c92626</color_3>
+            </theme_default>
+
+            <coupon>
+                <isactive>0</isactive>
+                <format>alphanum</format>
+                <length>8</length>
+                <dash>4</dash>
+                <show_coupon_code>0</show_coupon_code>
+            </coupon>
+
+            <translate>
+                <subscribe>Subscribe</subscribe>
+                <email>Email</email>
+                <error_email_not_valid>Please enter a valid email address.</error_email_not_valid>
+                <email_is_assigned_to_another_user>This email address is already assigned to another user.</email_is_assigned_to_another_user>
+                <success_message><![CDATA[Thank you for your subscription. <span>Check your email, we have sent voucher for you!</span>]]></success_message>
+                <error_with_subscription>There was a problem with the subscription.</error_with_subscription>
+                <success_message_need_to_confirm>Confirmation request has been sent.</success_message_need_to_confirm>
+                <error_with_coupon_generation>There was a problem with coupon generation.</error_with_coupon_generation>
+                <wait>Wait...</wait>
+                <email_already_exist>This email address already exists</email_already_exist>
+                <field>Field</field>
+                <is_required>is required!</is_required>
+                <must_be_checked>must be checked</must_be_checked>
+            </translate>
+        </exitpopup>
+    </default>
+</config>

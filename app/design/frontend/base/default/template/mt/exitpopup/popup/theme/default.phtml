@@ -1,0 +1,8 @@
+<div class="mteo-theme-default" style="border: 3px dashed <?php echo $this->getColor(3); ?>; background-color: <?php echo $this->getColor(1);?>">
+    <a style="background-color: <?php echo $this->getColor(3);?>" class="mteo-popup-close mteo-close" href="#"></a>
+
+    <?php if ($this->getContentType() == MT_Exitpopup_Model_Adminhtml_System_Config_Content::CONTENT_TYPE_NEWSLETTER_SUBSCRIPTION_FORM): ?>
+        <?php echo $this->getChildHtml('popup_theme_default_subscription');?>
+    <?php endif; ?>
+
+</div>

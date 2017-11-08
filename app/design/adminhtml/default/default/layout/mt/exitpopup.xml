@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_system_config_edit>
+        <reference name="head">
+            <action method="addJs"><script>mt/exitpopup/adminhtml/jscolor/jscolor.js</script></action>
+            <action method="addItem"><type>skin_css</type><name>mt/exitpopup/adminhtml.css</name><params/></action>
+        </reference>
+    </adminhtml_system_config_edit>
+</layout>

@@ -1,0 +1,18 @@
+<?php if ($this->isActivePopUp()): ?>
+<?php $contentType = $this->getContentType(); ?>
+<div id="mteo_popup_bg_layer">
+    <div id="mteo_popup_content">
+        <?php if ($contentType == MT_Exitpopup_Model_Adminhtml_System_Config_Content::CONTENT_TYPE_STATIC_CMS_BLOCK):?>
+            <?php echo $this->getStaticBlockHtml(); ?>
+        <?php else: ?>
+            <?php echo $this->getPopupContentHtml(); ?>
+        <?php endif; ?>
+    </div>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        exitPopup.init(<?php echo $this->getConfigJs(); ?>);
+    });
+</script>
+<?php endif; ?>

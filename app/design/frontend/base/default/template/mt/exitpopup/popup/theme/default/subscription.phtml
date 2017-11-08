@@ -1,0 +1,31 @@
+<?php $helper = Mage::helper('exitpopup'); ?>
+<div  id="mteo_subcription_form" >
+    <div class="mteo-box-icon" style="background-color: <?php echo $this->getColor(3); ?>"></div>
+    <?php if ($this->getText(1)): ?>
+    <div class="mteo-text-row-1" style="color: <?php echo $this->getColor(2); ?>">
+        <?php echo $this->getText(1) ?>
+    </div>
+    <?php endif; ?>
+
+    <?php if ($this->getText(2)): ?>
+    <div class="mteo-text-row-2" style="color: <?php echo $this->getColor(2); ?>">
+        <?php echo $this->getText(2) ?>
+    </div>
+    <?php endif; ?>
+
+
+    <div class="mteo-subscribe">
+        <div id="mteo_subscribe_form">
+            <input class="mt-validator-required mt-validator-email" data-field-name="<?php echo $helper->translate('email'); ?>" onclick="if(this.value=='<?php echo $helper->translate('email'); ?>') this.value=''" onblur="if(this.value=='') this.value='<?php echo $helper->translate('email'); ?>'" id="mteo_email" name="subscribe_email" value="<?php echo $helper->translate('email'); ?>" type="text">
+            <a style="background-color: <?php echo $this->getColor(2);  ?>; color: <?php echo $this->getColor(1); ?>" href="javascript:void(0)" id="mteo_submit" ><?php echo $helper->translate('subscribe'); ?></a>
+        </div>
+        <div id="mteo_msg_error"></div>
+    </div>
+
+</div>
+
+
+<div id="mteo_subscription_success">
+    <div class="mteo-box-icon-success" style="background-color: <?php echo $this->getColor(3); ?>"></div>
+    <div class="mteo-success-msg" style="color: <?php echo $this->getColor(2); ?>"></div>
+</div>

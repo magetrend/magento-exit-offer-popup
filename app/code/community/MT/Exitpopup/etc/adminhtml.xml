@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <newsletter>
+            <children>
+                <newsletter_popup_report>
+                    <title>Newsletter Popup Pro Reports</title>
+                    <sort_order>99</sort_order>
+                    <action>adminhtml/exitpopup_report/index</action>
+                </newsletter_popup_report>
+            </children>
+        </newsletter>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <exitpopup translate="title" module="exitpopup">
+                                        <title>Newsletter Popup Pro</title>
+                                        <sort_order>60</sort_order>
+                                    </exitpopup>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+ </config>
