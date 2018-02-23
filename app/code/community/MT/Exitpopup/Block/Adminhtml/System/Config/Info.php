@@ -42,7 +42,7 @@ class MT_Exitpopup_Block_Adminhtml_System_Config_Info
             'compare' => 'http://www.magetrend.com/exit-intent-popup-free/?utm_source=m1epf#compare',
             'paid_name' => 'Exit Intent Popup PRO',
             'paid_link' => 'http://www.magetrend.com/exit-intent-popup/?utm_source=m1epf',
-            'paid_img' => 'http://magetrend.com/media/images/info/magento-exit-intent-popup.jpg',
+            'paid_img' => 'http://magetrend.com/media/images/info/magento-exit-intent-popup.png',
             'features' => array(
                 'Mobile Triggers',
                 'Responsive',
